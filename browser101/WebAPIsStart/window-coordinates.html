@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Coordinates</title>
+  </head>
+  <style>
+    body {
+      background-color: black;
+      /* overflow: hidden; */
+    }
+    div {
+      height: 100px;
+      width: 100px;
+      background-color: yellow;
+      padding: 20px;
+      margin-bottom: 10px;
+    }
+    .special {
+      background-color: tomato;
+    }
+  </style>
+  <body>
+    <div class="practice">asdf</div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="special"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+      const special = document.querySelector(".special");
+      special.addEventListener("click", (event) => {
+        const rect = special.getBoundingClientRect();
+        console.log(rect);
+        console.log(`client: ${event.clientX}, ${event.clientY}`);
+        console.log(`page: ${event.pageX}, ${event.pageY}`);
+      });
+      // 항상 이벤트에는 event라는 오브젝트가 전달된다. 그래서 클릭이 되면, 클릭 된 이벤트가 다양한
+      // 정보를 담은 event라는 오브젝트가 argument로 내 함수, 등록한 콜백함수에 전달이 되는 것이다.
+    </script>
+  </body>
+</html>

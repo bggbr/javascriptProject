@@ -1,0 +1,13 @@
+body,
+html {
+  cursor: url("img/target.png"), auto;
+}
+body {
+  background-color: black;
+}
+
+.target {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+}
