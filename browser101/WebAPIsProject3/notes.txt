@@ -1,0 +1,14 @@
+4.5 성능 보장 렌더링 순서 (약 12분)
+- 우리의 웹페이지나 웹어플리케이션을 브라우저가 사용자에게 보여주기까지 
+어떤 과정을 거치는지에 대해 설명
+- 이걸 잘 이해해야 성능이 좋은 어플리케이션을 만들 수 있다.
+- 애니메이션을 css로 하든 javascript로 하든 성능이 좋은 웹페이지를 만들 수 있다.
+- 브라우저에서 URL을 입력하게 되면 
+requests/response -> loading -> scripting -> rendering -> layout -> painting
+이라는 순서를 거치게 된다.
+
+영상 다시 보기!
+
+브라우저의 Operation은
+layout -> paint -> composition 순으로 발생한다.
+따라서 composition만 일어나게 하는 것이 좋다.

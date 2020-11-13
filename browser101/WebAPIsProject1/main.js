@@ -7,12 +7,12 @@
 //     console.log(event);
 // });
 
-const vertical = document.querySelector('.vertical');
-const horizontal = document.querySelector('.horizontal');
-const target = document.querySelector('.target');
-const tag = document.querySelector('.tag');
+const vertical = document.querySelector(".vertical");
+const horizontal = document.querySelector(".horizontal");
+const target = document.querySelector(".target");
+const tag = document.querySelector(".tag");
 
-document.addEventListener('mousemove', (event) => {
+window.addEventListener("mousemove", (event) => {
     const x = event.clientX;
     const y = event.clientY;
 
