@@ -1,0 +1,53 @@
+브라우저가 렌더링하는 순서
+
+1. DOM - DOCUMENT OBJECT MODEL
+
+html파일을 부라우저가 읽게 된다. 브라우저는 각각의 body와 같은 tag들을 읽고 분석해서 노드(Node)로 변환한다. (브라우저가 이해할 수 있는 자기들만의 오브젝트로 변환한다는 의미)
+
+EventTarget <- Node (상속하다, 물려 받다)
+결국 Node는 EventTarget의 오브젝트라는 것이다. 모든 Node는 이벤트가 발생할 수 있다.
+
+EventTarget <- Node <- Document
+                    <- Element
+                    <- Text, ....
+                    즉, 모든 요소에서 이벤트가 발생할 수 있다.
+이 Element에도 다양한 Element가 존재한다.
+
+Element <- HTMLElement <- HTMLInputElement
+                       <- HTMLDivElement
+
+굉장히 많은 자식들이 존재한다.
+DOM Tree 참고 (4.1 DOM 큰 그림 이해하기 강의 참고 4:00)
+
+2. EventTarget
+
+DOM Node라는 인터페이스는 DOM API를 쓰는데 필수적이다.
+모든 Node는 EventTarget이다.
+
+EventTarget에는 총 세 가지 메소드가 있다.
+1. addEventLister()
+2. remove()
+3. dispatch()
+
+결국 모든 요소들은 Node이고 Node는 EventTarget이기 때문에 EventTarget에서 지원하는 세 가지 메소드를 쓸 수 있다.
+
+** <body> == $0 이면 콘솔에서 $0으로 참조 가능하다.
+   $0.childNodes
+
+결론은 모든 노드는 EventTarget이다.
+
+3. CSSOM
+
+브라우저에서 우리 html 파일을 분석하게 되면 html에 있는 요소들을 DOM으로 변환 했는데 CSS는 어디로 갈까? 
+html이 CSS를 어떻게 이해하는지 알아보자.
+
+우리가 제일 부모인 html에서 폰트 사이즈를 14라고 하게 되면 cascading 룰에 따라 body 모든 자식 요소들이 14로 기본적으로 설정이 되는 것이다. CSSOM에는 모든 계산된 속성들이 계산 돼 있다.
+
+브라우저가 html 파일을 읽게 되면 제일 처음 DOM 트리를 만들 게 된다. 그 다음 CSS 파일을 읽은 다음에 전부 다 계산해서, CSS 스타일의 트리를 만들 게 된다. 이거 다음에 DOM과 CSSOM을 합해서 최종적으로 Render Tree를 만든다.
+
+Render Tree에는 사용자에게 궁극적으로 보여지는 아이들만 선별 돼 보여진다.
+
+4. Rendering
+
+렌더링을 잘 이해해야 성능이 좋은 웹 어플리케이션을 만들 수 있다.
+
