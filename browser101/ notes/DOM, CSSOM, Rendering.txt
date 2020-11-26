@@ -51,3 +51,10 @@ Render Tree에는 사용자에게 궁극적으로 보여지는 아이들만 선�
 
 렌더링을 잘 이해해야 성능이 좋은 웹 어플리케이션을 만들 수 있다.
 
+브라우저에게 url을 입력하게 되면 
+request/response -> loading -> scripting -> rendering -> layout -> painting 순서로 진행하게 된다.
+
+브라우저가 서버에게 html을 요청하게 된다. 
+
+
+
