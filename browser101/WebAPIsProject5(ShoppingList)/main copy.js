@@ -22,7 +22,9 @@ function onAdd() {
     }
     const item = createItem(text);
     items.appendChild(item);
-    item.scrollIntoView({ block: 'center' });
+    item.scrollIntoView({
+        block: 'center'
+    });
     input.value = '';
     input.focus();
 }

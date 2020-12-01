@@ -34,7 +34,9 @@ function onAdd() {
     // 3. items라는 컨테이너 안에 새로 만든 아이템을 추가한다.
     items.appendChild(item);
     // 4. 새로 추가된 아이템으로 스크롤링
-    item.scrollIntoView({ block: 'center' });
+    item.scrollIntoView({
+        block: 'center'
+    });
     // 5. text input을 초기화한다.
     input.value = '';
     input.focus();
