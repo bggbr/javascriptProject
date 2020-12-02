@@ -20,6 +20,7 @@ function onAdd() {
         input.focus();
         return;
     }
+
     const item = createItem(text);
     items.appendChild(item);
     item.scrollIntoView({
@@ -28,6 +29,7 @@ function onAdd() {
     input.value = '';
     input.focus();
 }
+
 let id = 0; // UUID
 
 function createItem(text) {
@@ -35,25 +37,23 @@ function createItem(text) {
     itemRow.setAttribute('class', 'item__row');
     itemRow.setAttribute('data-id', id);
     // 아이템 엘리먼트를 만든 다음에 li에 클래스를 지정한 다음에 아이템을 리턴할 것이다. 이 아이템 안에는 사실 섹션 안에 ul안에 li에 보면, childnode가 두개가 있다. 스트링 템플릿을 이용해서 구현해보자. text 입력 추가해주고 버튼과 아이템에는 각각 아이템을 지정해서 고유한 아이디를 지정해 줄 것이다.
-    itemRow.innerHTML =
-        `
+    itemRow.innerHTML = `
         <div class="item">
             <span class="item__name">${text}</span>
-                <button class="item__delete" >
-                    <i class="fas fa-trash-alt"></i>
+                <button class="item__delete">
+                    <i class="fas fa-trash-alt" data-id=${id}></i>
                 </button>
         </div>
-        <div class="item__divider"></div>
-        `;
+        <div class="item__divider"></div>`;
     id++;
     return itemRow;
 }
 
-addBtn.addEventListener("click", () => {
+addBtn.addEventListener('click', () => {
     onAdd();
 })
 
-input.addEventListener("keypress", (event) => {
+input.addEventListener('keypress', (event) => {
     if (event.key == 'Enter') {
         onAdd();
     }
