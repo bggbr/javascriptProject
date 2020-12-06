@@ -1,0 +1,10 @@
+const box = document.querySelector('.backgroundBox');
+const img = document.createElement('img');
+img.setAttribute('class', 'bug3');
+img.setAttribute('src', 'img/bug.png');
+img.style.width = '100px';
+img.style.height = '100px';
+img.style.top = '750px';
+img.style.left = '850px';
+box.appendChild(img);
+console.log(img);
