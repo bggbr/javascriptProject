@@ -39,27 +39,28 @@
     }
 
     function alertNum(num) {
-        alert(`alert! ${num}`);
-    }
-    coolCounter.increase(printSomething);
-    coolCounter.increase(printSomething);
-    coolCounter.increase(printSomething);
-    coolCounter.increase(printSomething);
-    coolCounter.increase(printSomething);
+        function alertNum(num) {
+            alert(`alert! ${num}`);
+        }
+        coolCounter.increase(printSomething);
+        coolCounter.increase(printSomething);
+        coolCounter.increase(printSomething);
+        coolCounter.increase(printSomething);
+        coolCounter.increase(printSomething);
 
-    // 여기서 문제점은? increase함수를 호출할 때마다 printSomething을 전달해야 한다.
-    // constructor에 콜백 함수를 전달한다.
-    coolCounter.increase();
-    coolCounter.increase();
-    coolCounter.increase();
-    coolCounter.increase();
-    coolCounter.increase();
+        // 여기서 문제점은? increase함수를 호출할 때마다 printSomething을 전달해야 한다.
+        // constructor에 콜백 함수를 전달한다.
+        coolCounter.increase();
+        coolCounter.increase();
+        coolCounter.increase();
+        coolCounter.increase();
+        coolCounter.increase();
 
-    // 하나의 클래스로 다양한 오브젝트를 만들어서 서로 다른 기능을 수행하는 오브젝트를 만들 수 있다.
-    // 이렇게 하면 클래스의 재사용 가능성이 높아진다.
-    // 가능하면, 클래스를 완전체로 만들기 보다는 레고로 원하는 기능을 조립해서 만드는 것 처럼, 재조립이 가능하도록 만드는 것이 좋다.
-    const printCounter = new Counter(printSomething);
-    const alertCounter = new Counter(alertNum);
+        // 하나의 클래스로 다양한 오브젝트를 만들어서 서로 다른 기능을 수행하는 오브젝트를 만들 수 있다.
+        // 이렇게 하면 클래스의 재사용 가능성이 높아진다.
+        // 가능하면, 클래스를 완전체로 만들기 보다는 레고로 원하는 기능을 조립해서 만드는 것 처럼, 재조립이 가능하도록 만드는 것이 좋다.
+        const printCounter = new Counter(printSomething);
+        const alertCounter = new Counter(alertNum);
 </script>
 
 </html>
