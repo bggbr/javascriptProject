@@ -1,5 +1,11 @@
 'use strict';
 
+const carrotSound = new Audio('./sound/carrot_pull.mp3');
+const alertSound = new Audio('./sound/alert.mp3');
+const bgSound = new Audio('./sound/bg.mp3');
+const bugSound = new Audio('./sound/bug_pull.mp3');
+const winSound = new Audio('./sound/game_win.mp3');
+
 const CARROT_SIZE = 80;
 const CARROT_COUNT = 5;
 const BUG_COUNT = 7;
@@ -25,26 +31,81 @@ gameBtn.addEventListener('click', () => {
     } else {
         startGame();
     }
-    started = !started;
 })
 
+field.addEventListener('click', onFiledClick);
+
+popUpRefresh.addEventListener('click', () => {
+    startGame();
+    hidePopUp();
+})
+
+function onFiledClick(event) {
+    if (started === false) {
+        return;
+    }
+    const target = event.target;
+    if (target.matches('.carrot')) {
+        target.remove();
+        score++;
+        playSound(carrotSound);
+        updateScoreBoard();
+        if (score === CARROT_COUNT) {
+            finishGame(true);
+        }
+    } else if (target.matches('.bug')) {
+        finishGame(false);
+    }
+}
+
+function playSound(sound) {
+    sound.play();
+}
+
+function stopSound(sound) {
+    sound.pause();
+}
+
+function finishGame(win) {
+    started = false;
+    hideGameButton();
+    if (win) {
+        playSound(winSound);
+    } else {
+        playSound(bugSound);
+    }
+    stopGameTimer();
+    stopSound(bgSound);
+    showPopUpWithText(win ? 'YOU WON!!' : 'YOU LOSE!!');
+}
+
+function updateScoreBoard() {
+    gameScore.innerText = CARROT_COUNT - score;
+}
+
 function startGame() {
+    started = true;
     initGame();
     showStopButton();
     showTimerAndScore();
     startGameTimer();
+    playSound(bgSound);
 }
 
 function stopGame() {
+    started = false;
     stopGameTimer();
     hideGameButton();
     showPopUpWithText('REPLAY?');
+    playSound(alertSound);
+    stopSound(bgSound);
 }
 
 function showStopButton() {
-    const icon = gameBtn.querySelector('.fa-play');
+    const icon = gameBtn.querySelector('.fas');
     icon.classList.add('fa-stop');
     icon.classList.remove('fa-play');
+    gameBtn.style.visibility = 'visible';
 }
 
 function hideGameButton() {
@@ -62,6 +123,7 @@ function startGameTimer() {
     timer = setInterval(() => {
         if (remainingTimeSec <= 0) {
             clearInterval(timer);
+            finishGame(CARROT_COUNT === score);
             return;
         }
         updateTimerText(--remainingTimeSec);
@@ -83,7 +145,12 @@ function showPopUpWithText(text) {
     popUp.classList.remove('pop-up--hide');
 }
 
+function hidePopUp() {
+    popUp.classList.add('pop-up--hide');
+}
+
 function initGame() {
+    score = 0;
     field.innerHTML = '';
     gameScore.innerText = CARROT_COUNT;
     // 벌레와 당근을 생성한 뒤 field에 추가해준다.
