@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 변수는 프로그래밍 언어에서 데이터 처리를 위해 정의할 수 있는 것.
+
+    // number, string, boolean, null, undefined
+    let number = 2;
+    let number2 = number;
+
+    console.log(number);
+    console.log(number2);
+
+    // object
+    // key: value로 구성돼 있다.
+
+    let obj = {
+        name: 'ellie',
+        age: 5,
+    }
+
+    console.log(obj.name);
+    let obj2 = obj;
+
+    obj.name = 'james';
+    console.log(obj.name);
+    console.log(obj2.name);
+
+    const obj = {
+        name: 'ellie',
+        age: 5,
+    }
+
+    // 다른 변수들을 const로 선언하면, 변경은 불가능하다.
+    // 하지만 객체는 const로 선언하면 그 객체는 변경이 불가능하지만, 객체 안에 변수들은 변경이 가능하다.
+</script>
+
+</html>

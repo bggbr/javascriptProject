@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const num1 = 1;
+    const num2 = 2;
+    const result = num1 + num2;
+    console.log(result);
+
+    function add(a, b) {
+        return a + b;
+    }
+    console.log(add(5.6, 6.6));
+
+    const sum = add(3, 4);
+    console.log(sum);
+
+    const sum2 = (a, b) => {
+        return a + b;
+    }
+    console.log(sum2(7, 8));
+
+    const doSomeThing = add;
+
+    // 함수의 이름은 함수의 내용을 가리키고 있는 것이다.
+    // 함수는 객체와 같이 다른 메모리에 저장이 돼 함수 내용 부분을 가리키고 있다.
+    // 함수를 복사한 doSomeThing도 같은 부분을 가리키고 있다.
+
+
+    //operator라는 인자의 이름은 add와 같은 reference가 복사되어 전달된다.
+    function surprise(operator) {
+        const result = operator(5, 6);
+        console.log(result);
+    }
+    surprise(add);
+
+    function divide(num1, num2) {
+        return num1 / num2;
+    }
+</script>
+
+</html>
