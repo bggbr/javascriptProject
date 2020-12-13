@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Window-Scrolling</title>
+  </head>
+  <style>
+    div {
+      height: 100px;
+      width: 100px;
+      background-color: yellow;
+      padding: 20px;
+      margin-bottom: 10px;
+    }
+    .special {
+      background-color: tomato;
+    }
+    aside {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+    }
+    /* .scrollmove {
+    }
+    .scrollpx {
+    }
+    .scrollspecial {
+    } */
+  </style>
+  <body>
+    <aside>
+      <button class="scrollby">scroll move by 100px</button>
+      <button class="scrollpx">scroll move 100px</button>
+      <button class="scrollspecial">scroll move special</button>
+    </aside>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="special"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+      const scrollpx = document.querySelector(".scrollpx");
+      scrollpx.addEventListener("click", () => {
+        window.scrollTo(0, 100);
+      });
+
+      // 1.
+      const special = document.querySelector(".special");
+      const specialX = special.getBoundingClientRect().left;
+      const specialY = special.getBoundingClientRect().right;
+      console.log(specialX, ", ", specialY);
+      const scrollspecial = document.querySelector(".scrollspecial");
+      scrollspecial.addEventListener("click", () => {
+        window.scrollTo(specialX, specialY);
+      });
+      // 2.
+      scrollspecial.addEventListener("click", () => {
+        special.scrollIntoView();
+      });
+
+      const scrollby = document.querySelector(".scrollby");
+      scrollby.addEventListener("click", () => {
+        window.scrollBy(0, 100);
+      });
+    </script>
+  </body>
+</html>

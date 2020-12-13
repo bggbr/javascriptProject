@@ -4,66 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CarrotGame</title>
-    <style>
-        body {
-            background-color: black;
-        }
-
-        .box {
-            width: 1500px;
-            height: 1000px;
-            margin: auto;
-            text-align: center;
-            background-color: blue;
-        }
-
-        .bug {
-            width: 100px;
-            height: 100px;
-        }
-
-        .carrot {
-            width: 100px;
-            height: 100px;
-        }
-    </style>
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+    <script src="https://kit.fontawesome.com/6e05627340.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <section class="box">
-        <img class="background" src="img/background.png" alt="" width="1500px" height="1000px">
-        <!-- <img src="img/bug.png" alt="" class="bug bug1">
-        <img src="img/bug.png" alt="" class="bug bug2"> -->
+    <section class="game">
+        <header class="game__header">
+            <button class="game__button">
+                <i class="fas fa-play"></i>
+            </button>
+            <span class="game__timer">
+                <i class="far fa-clock">00:00</i>
+            </span>
+            <span class="game__score">9</span>
+        </header>
+        <header class="game__field"></header>
+    </section>
+    <section class="pop-up pop-up--hide">
+        <button class="pop-up__refresh">
+            <i class="fas fa-sync-alt"></i>
+        </button>
+        <span class="pop-up__message">Hello</span>
     </section>
 </body>
-<script>
-    const box = document.querySelector('.box');
-    // let randNum = Math.floor(Math.random() * 10) + 3;
-    function randValue(min, max) {
-        var randValue = Math.floor(Math.random() * (max - min + 1)) + min;
-        return randValue;
-    }
-    randNum = randValue(5, 8);
-    for (var num = 0; num < randNum; num++) {
-        const button = document.createElement('button');
-        button.setAttribute('class', `button${num}`);
-        const img = document.createElement('img');
-        img.setAttribute('class', `bug bug${num}`);
-        img.setAttribute('src', 'img/bug.png');
-        button.appendChild(img);
-    }
-    for (var num = 0; num < randNum; num++) {
-        const img = document.createElement('img');
-        img.setAttribute('class', `carrot carrot${num}`);
-        img.setAttribute('src', 'img/carrot.png');
-        box.appendChild(img);
-    }
-    // const bug = document.querySelector('.bug.bug1');
-
-    window.addEventListener('click', () => {
-        console.log('ji');
-    })
-</script>
 
 </html>

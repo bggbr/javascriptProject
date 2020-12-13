@@ -44,7 +44,6 @@ button {
     margin-top: 8px;
     visibility: hidden;
     user-select: none;
-    cursor: auto;
 }
 
 .game__score {
