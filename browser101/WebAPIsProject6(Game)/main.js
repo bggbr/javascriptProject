@@ -7,9 +7,9 @@ const bugSound = new Audio('./sound/bug_pull.mp3');
 const winSound = new Audio('./sound/game_win.mp3');
 
 const CARROT_SIZE = 80;
-const CARROT_COUNT = 5;
-const BUG_COUNT = 7;
-const GAME_DURATION_SEC = 5;
+const CARROT_COUNT = 10;
+const BUG_COUNT = 13;
+const GAME_DURATION_SEC = 10;
 const field = document.querySelector('.game__field');
 const fieldRect = field.getBoundingClientRect();
 const gameBtn = document.querySelector('.game__button');
