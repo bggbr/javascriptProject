@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="button">Click to add</button>
+</body>
+<script>
+    const button = document.querySelector('button');
+    button.addEventListener('click', (event) => {
+        const element = document.createElement('h1');
+        document.body.appendChild(element);
+        element.style.color = 'red';
+        element.innerText = 'Hello';
+    })
+    // 여기 콜백 안에서 작성된 코드는 어떤 순서를 하든 상관이 없습니다. 왜냐하면 이 콜백이 콜백 스택에 들어가는 순간 이벤트 루프는 이것이 다 실행 될 때 까지 기다렸다가 나중에 렌더링이 될 때 전체적으로 적용된 아이들이 레이아웃 페인트에 걸쳐서 브라우저에 표기 되기 떄문이에요. 우리는 Web APIs 중에 하나인 AddEventListener 라는 함수를 이용해서 우리가 작성한 콜백 함수를 등록해 놓았습니다. 브라우저야 여기에 버튼에 클릭이 발생하면 내가 등록한 이 콜백 함수를 처리해줘 라고 등록을 해 놓고 
+
+    // 그리고 나중에 클릭 이벤트가 발생하면 이 Web APIs는 우리가 등록한 함수를 Task Queue에 보내게 된다. 그래서 우리가 등록한 이 콜백 함수가 태스크 큐에 들어오게 되고, 여기서 이벤트 루프가 빙글빙글 돌다가 어? 태스크 큐에 아이템이 있네? 여기 콜 스택으로 가지고 와야지 하면서 콜 스택으로 가져오게 되고, 이 콜백 함수가 끝날 때까지 모든 것이 다 수행이 될 때까지 기다렸다가 콜 스택이 끝난 다음에 바디에다가 우리가 만든 엘리먼트를 등록하고 스타일을 바꾸고 다 한 다음에! 콜 스택에서 아이템이 사라지게 되면 그때서야 이벤트 루프는 렌더링 순서로 가게 되는 것이다.
+</script>
+
+</html>

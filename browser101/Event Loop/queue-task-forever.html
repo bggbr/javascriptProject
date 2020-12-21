@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .button {
+        font-size: 65px;
+        background-color: gray;
+    }
+
+    button:hover {
+        background-color: aqua;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <button>While(true)</button>
+</body>
+
+<script>
+    const button = document.querySelector('button');
+    button.addEventListener('click', () => {
+        while (true) {
+            // repeat
+        }
+    });
+</script>
+<!-- 
+    콜 스택이 영원히 끝나지 않고 있다.
+    콜 스택 안에 함수를 오래 머무르는 것은 좋지 않다.
+    최대한 콜백은 간단한 아이만 작성하는 것이 좋다.
+    while과 같은 반복문 그리고 재귀 함수 같은 아이들을 조심해서
+    사용하는 것이 좋다.
+ -->
+
+</html>
