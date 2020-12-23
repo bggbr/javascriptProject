@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button {
+        background-color: blanchedalmond;
+    }
+</style>
+
+<body>
+    <button>RequestAnimationFrame</button>
+</body>
+<script>
+    const button = document.querySelector('button');
+    button.addEventListener('click', () => {
+        requestAnimationFrame(() => {
+            document.body.style.backgroundColor = 'beige';
+        });
+        requestAnimationFrame(() => {
+            document.body.style.backgroundColor = 'orange';
+        });
+        requestAnimationFrame(() => {
+            document.body.style.color = 'red';
+        });
+        setTimeout(() => {
+            // 지금 수행되고 있는 즉, 콜 스택 안에서 이 코드 블럭이 실행되는 이 순간 말고, 이게 끝나면 이벤트 루프가 한 바퀴 돌 때 그 다음에 이 코드 블럭을 실행해 달라고 말하고 싶을 때 그때 많이 쓴다. 
+            // 다음 이벤트 루프가 동작할 때 내 것을 실행해 달라고 하기 위한 테크닉이다.
+            // 모든 코드가 수행된 다음 턴 때 수행이 되도록!
+        }, 0)
+    })
+</script>
+
+</html>
