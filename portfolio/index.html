@@ -1,86 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bob's portfolio</title>
-    <meta name ="description" content="portfolio for world-renowned software engineer Bob">
-    <meta name="author" content="Bob">
-    <script src="https://kit.fontawesome.com/6e05627340.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com"> 
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;500;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="imgs/favicon.png">
-    <!-- font-family: 'Noto Sans JP', sans-serif; -->
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
-</head>
-<body>
-    <!-- Navbar -->
-    <nav id="navbar">
-        <div class="navbar__logo">
-            <img src="imgs/favicon.png" alt="" srcset="">
-            <a href="#">BOB</a>
-        </div>
-        <ul class="navbar__menu">
-            <li class="navbar__menu__item">Home</li>
-            <li class="navbar__menu__item">About</li>
-            <li class="navbar__menu__item">Skills</li>
-            <li class="navbar__menu__item">My work</li>
-            <li class="navbar__menu__item">Testimonials</li>
-            <li class="navbar__menu__item">Contact</li>
-        </ul>
-    </nav>
-    <!-- Home -->
-    <section id="home">
-        <img src="imgs/me.jpg" alt="BOB's profile photo" class="home__avatar">
-        <h1 class="home__title">Hello, <br />I'm Dream Coder</h1>
-        <h2 class="home__description">My name is jaejeongbang</h2>
-        <button class="home__contact">Contact Me</button>
-    </section>
-    <!-- About -->
-    <section id="about"> 
-        <h1>About Me</h1>
-        <p>I have been doing research on networks. He has mainly studied wireless sensor networks and vehicle networks. However, I became a developer because I was also interested in the front end and the back end</p>
-        <div class="about__majors">
-            <div class="major">
-                <div class="major__icon"><i class="fab fa-html5"></i></div>
-                <div class="major__title">Front-end</div>
-                <div class="major__description">HTML, CSS, JavaScript, TypeScript<br/>React, Vue, Web APIs
-                </div>
-            </div>
-            <div class="major">
-                <div class="major__icon"><i class="fas fa-car"></i></div>
-                <div class="major__title">V2X</div>
-                <div class="major__description">V2X, V2I, V2V, Clustering
-                </div>
-            </div>
-            <div class="major">
-                <div class="major__icon"><i class="fas fa-wifi"></i></div>
-                <div class="major__title">WSN</div>
-                <div class="major__description">Wireless Sensor Networks
-                </div>
-            </div>
-        </div>
-        <div class="about__jobs">
-            <div class="job">
-                <img src="imgs/cbnu.png" alt="cbnu" class="job__logo">
-                <p class="job__name">Master's degree</p>
-                <p class="job__period">2018.March - 2020.Feb</p>
-            </div>
-            <div class="job">
-                <img src="imgs/cbnu.png" alt="cbnu" class="job__logo">
-                <p class="job__name">Master's degree</p>
-                <p class="job__period">2018.March - 2020.Feb</p>
-            </div>
-        </div>
-    </section>
-    <!-- Skills -->
-    <section id="skills"></section>
-    <!-- Work -->
-    <section id="work"></section>
-    <!-- Testimonials -->
-    <section id="testimonials"></section>
-    <!-- Contact -->
-    <section id="contact"></section>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bob's portfolio</title>
+		<meta name="description" content="portfolio for world-renowned software engineer Bob" />
+		<meta name="author" content="Bob" />
+		<script src="https://kit.fontawesome.com/6e05627340.js" crossorigin="anonymous"></script>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;500;700&display=swap" rel="stylesheet" />
+		<link rel="icon" type="image/png" href="imgs/favicon.png" />
+		<!-- font-family: 'Noto Sans JP', sans-serif; -->
+		<link rel="stylesheet" href="style.css" />
+		<script src="main.js" defer></script>
+	</head>
+	<body>
+		<!-- Navbar -->
+		<nav id="navbar">
+			<div class="navbar__logo">
+				<img src="imgs/favicon.png" alt="" srcset="" />
+				<a href="#">BOB</a>
+			</div>
+			<ul class="navbar__menu">
+				<li class="navbar__menu__item">Home</li>
+				<li class="navbar__menu__item">About</li>
+				<li class="navbar__menu__item">Skills</li>
+				<li class="navbar__menu__item">My work</li>
+				<li class="navbar__menu__item">Testimonials</li>
+				<li class="navbar__menu__item">Contact</li>
+			</ul>
+		</nav>
+		<!-- Home -->
+		<section id="home">
+			<img src="imgs/me.jpg" alt="BOB's profile photo" class="home__avatar" />
+			<h1 class="home__title">Hello, <br />I'm Dream Coder</h1>
+			<h2 class="home__description">My name is jaejeongbang</h2>
+			<button class="home__contact">Contact Me</button>
+		</section>
+		<!-- About -->
+		<section id="about">
+			<h1>About Me</h1>
+			<p>
+				I have been doing research on networks. He has mainly studied wireless sensor networks and vehicle networks. However, I
+				became a developer because I was also interested in the front end and the back end
+			</p>
+			<div class="about__majors">
+				<div class="major">
+					<div class="major__icon"><i class="fab fa-html5"></i></div>
+					<div class="major__title">Front-end</div>
+					<div class="major__description">HTML, CSS, JavaScript, TypeScript<br />React, Vue, Web APIs</div>
+				</div>
+				<div class="major">
+					<div class="major__icon"><i class="fas fa-car"></i></div>
+					<div class="major__title">V2X</div>
+					<div class="major__description">V2X, V2I, V2V, Clustering</div>
+				</div>
+				<div class="major">
+					<div class="major__icon"><i class="fas fa-wifi"></i></div>
+					<div class="major__title">WSN</div>
+					<div class="major__description">Wireless Sensor Networks</div>
+				</div>
+			</div>
+			<div class="about__jobs">
+				<div class="job">
+					<img src="imgs/cbnu.png" alt="cbnu" class="job__logo" />
+					<p class="job__name">Master's degree</p>
+					<p class="job__period">2018.March - 2020.Feb</p>
+				</div>
+				<div class="job">
+					<img src="imgs/cbnu.png" alt="cbnu" class="job__logo" />
+					<p class="job__name">Master's degree</p>
+					<p class="job__period">2018.March - 2020.Feb</p>
+				</div>
+			</div>
+		</section>
+		<!-- Skills -->
+		<section id="skills">
+			<h1>Skills</h1>
+			<h2>Skills & Attributes</h2>
+			<p>
+				To simulate vehicle communication, a tool called network simulator3, which is mainly based on c/c++, was used. And I mainly
+				used python for the IoT project. I love learning new things. They are also interested in team activities and like to lead.
+			</p>
+			<!-- skillset과 left, right는 단순히 컨테이너이다. -->
+			<div class="skillset">
+				<div class="skillset__left">
+					<!-- LEFT -->
+					<h3 class="skillset_title">Skills</h3>
+					<div class="skill">
+						<div class="skill_description">
+							<span>HTML</span>
+							<span>99%</span>
+						</div>
+						<div class="skill__bar">
+							<div class="skill_value"></div>
+						</div>
+					</div>
+					<div class="skill">
+						<div class="skill_description">
+							<span>CSS</span>
+							<span>99%</span>
+						</div>
+						<div class="skill__bar">
+							<div class="skill_value"></div>
+						</div>
+					</div>
+					<div class="skill">
+						<div class="skill_description">
+							<span>JavaScript</span>
+							<span>99%</span>
+						</div>
+						<div class="skill__bar">
+							<div class="skill_value"></div>
+						</div>
+					</div>
+					<div class="skill">
+						<div class="skill_description">
+							<span>C/C++</span>
+							<span>99%</span>
+						</div>
+						<div class="skill__bar">
+							<div class="skill_value"></div>
+						</div>
+					</div>
+					<div class="skill">
+						<div class="skill_description">
+							<span>JAVA</span>
+							<span>99%</span>
+						</div>
+						<div class="skill__bar">
+							<div class="skill_value"></div>
+						</div>
+					</div>
+				</div>
+				<!-- RIGHT -->
+				<div class="skillset__right">
+					<div class="tools">
+						<h3 class="skillset_title">Tools</h3>
+						<ul class="tools__list">
+							<li><span>Visual Studio Code</span></li>
+							<li><span>IntelliJ</span></li>
+							<li><span>Network Simulator3</span></li>
+							<li><span>Android Studio</span></li>
+							<li><span>Active Mq</span></li>
+						</ul>
+					</div>
+					<div class="etc">
+						<h3 class="skillset_title">Etc</h3>
+						<ul class="etc__list">
+							<li><span>Git</span></li>
+							<li><span>SVN</span></li>
+							<li><span>Networks</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Work -->
+		<section id="work"></section>
+		<!-- Testimonials -->
+		<section id="testimonials"></section>
+		<!-- Contact -->
+		<section id="contact"></section>
+	</body>
 </html>
