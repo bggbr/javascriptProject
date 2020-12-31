@@ -1,56 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      .box {
-        width: 200px;
-        height: 100px;
-        background-color: beige;
-      }
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.box {
+				width: 200px;
+				height: 100px;
+				background-color: beige;
+			}
 
-      .inner {
-        width: 50%;
-        height: 50%;
-        background-color: blue;
-      }
+			.inner {
+				width: 50%;
+				height: 50%;
+				background-color: blue;
+			}
 
-      .inner1 {
-        margin: auto;
-      }
+			.inner1 {
+				margin: auto;
+			}
 
-      .box2 {
-        text-align: center;
-      }
+			.box2 {
+				text-align: center;
+			}
 
-      .inner3 {
-        transform: translate(50%, 50%);
-      }
+			.inner3 {
+				transform: translate(50%, 50%);
+			}
 
-      .box4 h1 {
-        text-align: center;
-        line-height: 100px;
-      }
-    </style>
-  </head>
-  <body>
-    <h3>margin: auto</h3>
-    <div class="box box1">
-      <div class="inner inner1"></div>
-    </div>
-    <h3>text-align: center</h3>
-    <div class="box box2">
-      <button>Text</button>
-    </div>
-    <h3>translate(50%, 50%)</h3>
-    <div class="box box3">
-      <div class="inner inner3"></div>
-    </div>
-    <h3>Text centering</h3>
-    <div class="box box4">
-      <h1>Text<br />Text</h1>
-    </div>
-  </body>
+			.box4 h1 {
+				text-align: center;
+				line-height: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>margin: auto</h3>
+		<div class="box box1">
+			<div class="inner inner1"></div>
+		</div>
+		<h3>text-align: center</h3>
+		<div class="box box2">
+			<button>Text</button>
+		</div>
+		<h3>translate(50%, 50%)</h3>
+		<div class="box box3">
+			<div class="inner inner3"></div>
+		</div>
+		<h3>Text centering</h3>
+		<div class="box box4">
+			<h1>Text<br />Text</h1>
+		</div>
+	</body>
 </html>
+<!-- 
+  div는 블록 레벨이라 한 줄에 한 개씩만 들어갈 수 있다.
+  블록 레벨은 margin: auto;를 이용하여 정렬해야 한다.
+  div와 같은 블록 레벨이 아닌 그 외는 text-align을 이용하면 중간 정렬할 수 있다.
+  지금 까지는 수평으로 중간 정렬이다!
+  하지만 수직으로는 가운데 정렬이 안 된다.
+  흔하게 쓸 수 있는 방법은 transform이다.
+  transform은 움직이는 거 로테이션 하는 것들이 가능하다.
+  text는 text-align을 이용하여 수평 중간으로 옮길 수 있는데, 수직은 안 된다.
+  해키한 방법으로 line-height을 이용하여 100px을 주면 수직 가운데로 정렬이 일어난다.
+  line-height: 100px; 단지!!! 한줄 정렬만!! 두줄이면 100px 만큼 수직으로 배치된다.
+ -->
