@@ -1,0 +1,33 @@
+/* Global */
+:root {
+	/* Color */
+	--color-white: #ffffff;
+	--color-light-white: #eeeeee;
+	--color-dark-white: #bdbdbd;
+	--color-pink: #fe918d;
+	--color-dark-pink: #ff6863;
+	--color-dark-grey: #4d4d4d;
+	--color-grey: #616161;
+	--color-light-grey: #7c7979;
+	--color-blue: #73aace;
+	--color-yellow: #fff7d1;
+	--color-orange: #feb546;
+	--color-black: #000000;
+	/* Font Size */
+	--font-large: 48px;
+	--font-medium: 28px;
+	--font-regular: 18px;
+	--font-small: 16px;
+	--font-micro: 14px;
+	/* Font Weight */
+	--weight-bold: 700;
+	--weight-semi-bold: 600;
+	--weight-regular: 400;
+	/* Size */
+}
+
+/* Universal Tags (공통적으로 정의할 것)*/
+* {
+	/* 우리가 패딩을 줬을 때, width와 height이 그 padding을 포함 했을 때도 동일한 width와 heigh이 되도록 만들어 놓는다는 의미 */
+	box-sizing: border-box;
+}
