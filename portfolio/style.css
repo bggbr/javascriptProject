@@ -25,6 +25,8 @@
 	--weight-regular: 400;
 	/* Size */
 	--size--border--radius: 4px;
+	/* Animation */
+	--animation-duration: 250ms;
 }
 
 /* Universal Tags (공통적으로 정의할 것)*/
@@ -126,4 +128,78 @@ button {
 	padding: 8px 12px;
 	border: 2px solid var(--color-white);
 	border-radius: var(--size--border--radius);
+}
+
+/* Section Common */
+/* 전부다 대부분의 아이템들이 중간으로 정렬돼 있다.
+우리가 공통적인 것들을 정의해줄 필요가 있다. 
+각 섹션마다 고유한 id는 있지만 section이기 때문에 
+고유한 클래스 section이라고 지정해준다.*/
+.section {
+	padding: 50px;
+	text-align: center;
+	max-width: 1200px;
+	/* 일단 브라우저 일반적인 max-width는 1200px이다
+    안되면 물어보지 말고 속성 검사부터 해보자. margin이 오른쪽에만 들어가있네? */
+	margin: auto;
+}
+
+/* About */
+.about__majors {
+	display: flex;
+	justify-content: space-between;
+	margin: 80px 0;
+}
+
+.major__icon {
+	size: 170px;
+	height: 170px;
+	font-size: 70px;
+	line-height: 170px;
+	color: var(--color-blue);
+	margin: auto;
+	border: 1px solid var(--color-blue);
+	border-radius: 50%;
+	margin-bottom: 16px;
+}
+
+.major__icon:hover i {
+	color: green;
+	transform: rotate(-30deg) scale(1.2);
+}
+
+.major__icon i {
+	transition: var(--animation-duration);
+}
+
+.major__title,
+.major__description {
+	color: var(--color-dark-grey);
+}
+
+.major__description {
+	font-size: var(--font-small);
+}
+
+.job {
+	display: flex;
+	align-items: center;
+}
+
+.job__description {
+	margin: 0 16px;
+	text-align: left;
+}
+
+.job__name,
+.job__period {
+	color: var(--color-light-grey);
+}
+
+.job__name {
+	font-size: var(--font-small);
+}
+
+.job__period {
+	font-size: var(--font-small);
 }
