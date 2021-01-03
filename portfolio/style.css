@@ -13,6 +13,7 @@
 	--color-yellow: #fff7d1;
 	--color-orange: #feb546;
 	--color-black: #000000;
+	--color-green: #059449;
 	/* Font Size */
 	--font-large: 48px;
 	--font-medium: 28px;
@@ -291,4 +292,110 @@ p {
 .tools,
 .etc {
 	padding: 20px;
+}
+
+/* Work */
+.work__categories {
+	margin: 40px;
+}
+.category__btn {
+	border: 1px solid var(--color-dark-white);
+	border-radius: 4px;
+	font-size: var(--font-regular);
+	padding: 8px 48px;
+}
+.category__btn.active,
+.category__btn:hover {
+	background-color: var(--color-green);
+	color: white;
+}
+
+.category__count {
+	background-color: var(--color-orange);
+	border-radius: 50%;
+	color: var(--color-white);
+	margin-left: 5px;
+	width: 24px;
+	height: 24px;
+	/* 여기까지만 해도 동그라미가 이쁘지 않다. 이유는 span은
+    콘텐츠를 꽉 감싸주는 아이이기 때문이다. display를 inline-block으로
+    바꾼다. */
+	display: inline-block;
+	line-height: 24px;
+	position: relative;
+	top: -24px;
+	left: 5px;
+	opacity: 0;
+	transition: all var(--animation-duration);
+}
+
+.category__btn.active .category__count,
+.category__btn:hover .category__count {
+	opacity: 1;
+	top: 0px;
+}
+
+.work__projects {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.project {
+	position: relative;
+	width: 280px;
+	height: 200px;
+	margin: 2px;
+	background-color: var(--color-light-white);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.project__img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+/* project__description은 원래 project안에 있다
+우리가 원하는 것은 마우스를 올렸을 때 project의 설명을 나타내고 싶다.
+이것을 하기 위해서는 원래 있던 자리에 벗어나서 무언가를 보여줘야한다.
+이것은 position: absolute이다. 
+relative는 움직이긴 움직이지만 원래 상태를 유지하면 움직이게 되는 것이다.
+position: absolute를 사용하게 되면 어디로 이동할지 top과 left를 지정해줘야 한다. top, left를 0으로 두면 제일 위로 올라간다.
+왜냐하면 근접한 부모노드 중에 기본값인 position: static을 사용하지 않는 부모를 찾아가게 된다. 그런데 지금 position__description이 담겨 있는 부모는 project이다. project는 position을 지정하지 않았기 때문에 default 값인 position static이 된다. 결국 이동하게 되면서 body 부분으로 가게 되는 것이다.이를 방지하기 위해 project 클래스에 다른 것을 사용해줘야 한다. */
+.project__description {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: black;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	opacity: 0;
+	transform: translateY(10px);
+	transition: all var(--animation-duration) ease-in;
+}
+
+.project__description h3 {
+	color: var(--color-white);
+}
+
+.project__description h3:after {
+	display: block;
+	position: relative;
+	left: 50%;
+	content: '';
+	margin-left: -12px;
+	margin-top: 8px;
+	width: 25px;
+	height: 2px;
+	background-color: var(--color-dark-white);
+}
+
+.project:hover .project__description {
+	opacity: 0.8;
+	transform: translateY(0px);
 }
