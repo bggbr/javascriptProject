@@ -40,35 +40,37 @@
 		</section>
 
 		<!-- About -->
-		<section id="about" class="section">
+		<section id="about" class="section section__container">
 			<h1>About Me</h1>
 			<p>
 				I have been doing research on networks. He has mainly studied wireless sensor networks and vehicle networks. However, I
-				became a developer because I was also interested in the front end and the back end
+				became a developer because I was also interested in the front-end and the back-end
 			</p>
 			<div class="about__majors">
 				<div class="major">
-					<div class="major__icon"><i class="fab fa-html5"></i></div>
-					<div class="major__title">Front-end</div>
-					<div class="major__description">HTML, CSS, JavaScript, TypeScript<br />React, Vue, Web APIs</div>
+					<div class="major__icon">
+						<i class="fab fa-html5"></i>
+					</div>
+					<h2 class="major__title">Front-end</h2>
+					<div class="major__description">HTML, CSS, JavaScript<br />React, Web APIs</div>
 				</div>
 				<div class="major">
 					<div class="major__icon"><i class="fas fa-car"></i></div>
-					<div class="major__title">V2X</div>
+					<h2 class="major__title">V2X</h2>
 					<div class="major__description">V2X, V2I, V2V, Clustering</div>
 				</div>
 				<div class="major">
 					<div class="major__icon"><i class="fas fa-wifi"></i></div>
-					<div class="major__title">WSN</div>
-					<div class="major__description">Wireless Sensor Networks</div>
+					<h2 class="major__title">WSN</h2>
+					<p class="major__description">Wireless Sensor Networks</p>
 				</div>
 			</div>
 			<div class="about__jobs">
 				<div class="job">
 					<img src="imgs/cbnu.png" alt="cbnu" class="job__logo" />
 					<div class="job__description">
-						<p class="job__name">Master's degree</p>
-						<p class="job__period">2018.March - 2020.Feb</p>
+						<p class="job__name">Bachelor's degree</p>
+						<p class="job__period">2014.March - 2018.Feb</p>
 					</div>
 				</div>
 				<div class="job">
@@ -83,82 +85,85 @@
 
 		<!-- Skills -->
 		<section id="skills" class="section">
-			<h1>Skills</h1>
-			<h2>Skills & Attributes</h2>
-			<p>
-				To simulate vehicle communication, a tool called network simulator3, which is mainly based on c/c++, was used. And I mainly
-				used python for the IoT project. I love learning new things. They are also interested in team activities and like to lead.
-			</p>
-			<!-- skillset과 left, right는 단순히 컨테이너이다. -->
-			<div class="skillset">
-				<div class="skillset__left">
-					<!-- LEFT -->
-					<h3 class="skillset_title">Skills</h3>
-					<div class="skill">
-						<div class="skill_description">
-							<span>HTML</span>
-							<span>99%</span>
+			<div class="section__container">
+				<h1>Skills</h1>
+				<h2>Skills & Attributes</h2>
+				<p>
+					To simulate vehicle communication, a tool called network simulator3, which is mainly based on c/c++, was used. And I
+					mainly used python for the IoT project. I love learning new things. They are also interested in team activities and like
+					to lead.
+				</p>
+				<!-- skillset과 left, right는 단순히 컨테이너이다. -->
+				<div class="skillset">
+					<div class="skillset__left">
+						<!-- LEFT -->
+						<h3 class="skillset__title">Skills</h3>
+						<div class="skill">
+							<div class="skill__description" style="width: 99%">
+								<span>HTML</span>
+								<span>99%</span>
+							</div>
+							<div class="skill__bar">
+								<div class="skill__value" style="width: 99%"></div>
+							</div>
 						</div>
-						<div class="skill__bar">
-							<div class="skill_value"></div>
+						<div class="skill">
+							<div class="skill__description">
+								<span>CSS</span>
+								<span>80%</span>
+							</div>
+							<div class="skill__bar">
+								<div class="skill__value" style="width: 80%"></div>
+							</div>
+						</div>
+						<div class="skill">
+							<div class="skill__description">
+								<span>JavaScript</span>
+								<span>99%</span>
+							</div>
+							<div class="skill__bar">
+								<div class="skill__value" style="width: 99%"></div>
+							</div>
+						</div>
+						<div class="skill">
+							<div class="skill__description">
+								<span>C/C++</span>
+								<span>90%</span>
+							</div>
+							<div class="skill__bar">
+								<div class="skill__value" style="width: 90%"></div>
+							</div>
+						</div>
+						<div class="skill">
+							<div class="skill__description">
+								<span>JAVA</span>
+								<span>99%</span>
+							</div>
+							<div class="skill__bar">
+								<div class="skill__value" style="width: 99%"></div>
+							</div>
 						</div>
 					</div>
-					<div class="skill">
-						<div class="skill_description">
-							<span>CSS</span>
-							<span>99%</span>
+					<!-- RIGHT -->
+					<div class="skillset__right">
+						<div class="tools">
+							<h3 class="skillset__title">Tools</h3>
+							<ul class="tools__list">
+								<li><span>Visual Studio Code</span></li>
+								<li><span>IntelliJ</span></li>
+								<li><span>Network Simulator3</span></li>
+								<li><span>Android Studio</span></li>
+								<li><span>Active Mq</span></li>
+							</ul>
 						</div>
-						<div class="skill__bar">
-							<div class="skill_value"></div>
+						<div class="etc">
+							<h3 class="skillset__title">Etc</h3>
+							<ul class="etc__list">
+								<li><span>Git</span></li>
+								<li><span>SVN</span></li>
+								<li><span>Networks</span></li>
+							</ul>
 						</div>
-					</div>
-					<div class="skill">
-						<div class="skill_description">
-							<span>JavaScript</span>
-							<span>99%</span>
-						</div>
-						<div class="skill__bar">
-							<div class="skill_value"></div>
-						</div>
-					</div>
-					<div class="skill">
-						<div class="skill_description">
-							<span>C/C++</span>
-							<span>99%</span>
-						</div>
-						<div class="skill__bar">
-							<div class="skill_value"></div>
-						</div>
-					</div>
-					<div class="skill">
-						<div class="skill_description">
-							<span>JAVA</span>
-							<span>99%</span>
-						</div>
-						<div class="skill__bar">
-							<div class="skill_value"></div>
-						</div>
-					</div>
-				</div>
-				<!-- RIGHT -->
-				<div class="skillset__right">
-					<div class="tools">
-						<h3 class="skillset_title">Tools</h3>
-						<ul class="tools__list">
-							<li><span>Visual Studio Code</span></li>
-							<li><span>IntelliJ</span></li>
-							<li><span>Network Simulator3</span></li>
-							<li><span>Android Studio</span></li>
-							<li><span>Active Mq</span></li>
-						</ul>
-					</div>
-					<div class="etc">
-						<h3 class="skillset_title">Etc</h3>
-						<ul class="etc__list">
-							<li><span>Git</span></li>
-							<li><span>SVN</span></li>
-							<li><span>Networks</span></li>
-						</ul>
 					</div>
 				</div>
 			</div>

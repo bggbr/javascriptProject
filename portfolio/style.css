@@ -62,13 +62,39 @@ button {
 }
 
 /* Typography (패딩과 텍스트에 대해 스타일링을 먼저 해놓는 것) */
+h1 {
+	font-size: var(--font-large);
+	font-weight: var(--weight-bold);
+	color: var(--color-black);
+	margin: 16px 0px;
+}
 
+h2 {
+	font-size: var(--font-medium);
+	font-weight: var(--weight-semi-bold);
+	color: var(--color-black);
+	margin: 8px 0;
+}
+
+h3 {
+	font-size: var(--font-regular);
+	font-weight: var(--weight-regular);
+	color: var(--color-black);
+	margin: 8px 0;
+}
+
+p {
+	font-size: var(--font-regular);
+	font-weight: var(--weight-regular);
+	color: var(--color-black);
+	margin: 4px 0;
+}
 /* Navbar */
 #navbar {
 	/* 박스가 양쪽에 나올 수 있도록 flexbox로 하자 */
 	display: flex;
 	justify-content: space-between;
-	background-color: lightgreen;
+	background-color: #059449;
 	/* 수직축으로 정렬 */
 	align-items: center;
 	color: var(--color-white);
@@ -96,7 +122,7 @@ button {
 }
 
 .navbar__menu__item:hover {
-	background-color: var(--color-dark-pink);
+	background-color: #3cab71;
 	border-radius: var(--size--border--radius);
 }
 
@@ -138,9 +164,13 @@ button {
 .section {
 	padding: 50px;
 	text-align: center;
-	max-width: 1200px;
 	/* 일단 브라우저 일반적인 max-width는 1200px이다
     안되면 물어보지 말고 속성 검사부터 해보자. margin이 오른쪽에만 들어가있네? */
+	margin: auto;
+}
+
+.section__container {
+	max-width: 1200px;
 	margin: auto;
 }
 
@@ -153,6 +183,7 @@ button {
 
 .major__icon {
 	size: 170px;
+	width: 170px;
 	height: 170px;
 	font-size: 70px;
 	line-height: 170px;
@@ -202,4 +233,62 @@ button {
 
 .job__period {
 	font-size: var(--font-small);
+}
+
+#skills {
+	background: lightyellow;
+}
+
+.skillset {
+	color: var(--color-light-white);
+	display: flex;
+	background-color: var(--color-dark-grey);
+	margin: 20px 0;
+}
+
+.skillset__left {
+	flex-basis: 60%;
+	background-color: darkgrey;
+	padding: 20px 40px;
+}
+.skill__description {
+	display: flex;
+	justify-content: space-between;
+}
+
+.skill {
+	margin-bottom: 32px;
+}
+
+.skill__bar {
+	width: 100%;
+	height: 3px;
+	background-color: grey;
+}
+
+.skill__value {
+	/* width: 80%; */
+	height: 3px;
+	background-color: orange;
+}
+/* CSS에서 적용하게 되면, 모든 요소에 적용이 된다. 물론 클래스를 따로 만들어서
+할 수도 있다. 하지만 코드가 많아진다. 따라서 우리는 html에 css를 인라인화 시켜서
+관리할 것이다. */
+
+.skillset__right {
+	flex-basis: 60%;
+}
+
+.tools {
+	margin: 0;
+	background-color: var(--color-grey);
+}
+
+.skillset__title {
+	color: var(--color-white);
+}
+
+.tools,
+.etc {
+	padding: 20px;
 }
