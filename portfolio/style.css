@@ -128,6 +128,15 @@ p {
 	border-radius: var(--size--border--radius);
 }
 
+.navbar__toggle-btn {
+	position: absolute;
+	top: 18px;
+	right: 32px;
+	font-size: 24px;
+	color: white;
+	display: none;
+}
+
 /* Home */
 #home {
 	background: url('imgs/bg.png') center/cover no-repeat;
@@ -469,4 +478,47 @@ position: absolute를 사용하게 되면 어디로 이동할지 top과 left를 
 	transform: scale(1.1);
 	color: var(--color-yellow);
 	transition: all var(--animation-duration) ease-in;
+}
+
+/* For below 768px screen width */
+/* 미디어 쿼리 안에 들어가는 내용은 최소한의 것만 들어가야 한다. 
+즉, 차이점들만 뽑아진 아이들만 들어가야 한다는 것이다.
+스타일링은 본론에만 차이점만 media에 넣자.*/
+@media screen and (max-width: 768px) {
+	.navbar__toggle-btn {
+		display: block;
+	}
+	#navbar {
+		flex-direction: column;
+		align-items: flex-start;
+		/* flex-start를 사용하게 되면 왼쪽으로 정렬 */
+	}
+	.navbar__menu {
+		flex-direction: column;
+		text-align: center;
+		width: 100%;
+		display: none;
+	}
+
+	.about__majors {
+		flex-direction: column;
+	}
+
+	.major {
+		margin-bottom: 38px;
+	}
+
+	.skillset {
+		flex-direction: column;
+	}
+
+	.project {
+		/* grow란 알아서 화면을 메꿔주는 것이다. */
+		flex-grow: 1;
+	}
+
+	.testimonial__avatar {
+		width: 80px;
+		height: 80px;
+	}
 }
