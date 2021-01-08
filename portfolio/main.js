@@ -23,8 +23,24 @@ navbarMenu.addEventListener('click', (event) => {
 	if (link === null) {
 		return;
 	}
-	console.log(link);
-	const scrollTo = document.querySelector(link);
-	console.log(scrollTo); // null is not an object
-	scrollTo.scrollIntoView({ behavior: 'smooth', block: 'center' });
+	scrollIntoView(link);
+	// console.log(link);
+	// const scrollTo = document.querySelector(link);
+	// console.log(scrollTo); // null is not an object
+	// scrollTo.scrollIntoView({ behavior: 'smooth', block: 'center' });
 });
+
+// Handle click on "contact me" button on home
+const homeContactBtn = document.querySelector('.home__contact');
+// homeContactBtn.addEventListener('click', () => {
+// 	const contact = document.querySelector('#contact');
+// 	contact.scrollIntoView({ behavior: 'smooth', block: 'center' });
+// });
+homeContactBtn.addEventListener('click', () => {
+	scrollIntoView('#contact');
+});
+
+function scrollIntoView(selector) {
+	const scrollTo = document.querySelector(selector);
+	scrollTo.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
