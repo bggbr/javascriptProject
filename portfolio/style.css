@@ -91,6 +91,7 @@ p {
 	color: var(--color-black);
 	margin: 4px 0;
 }
+
 /* Navbar */
 #navbar {
 	position: fixed;
@@ -157,8 +158,7 @@ p {
 	transition: all var(--animation-duration) ease-in-out;
 }
 
-#home.home__dark {
-}
+#home.home__dark {}
 
 .home__avatar {
 	width: 250px;
@@ -277,6 +277,7 @@ p {
 	background-color: darkgrey;
 	padding: 20px 40px;
 }
+
 .skill__description {
 	display: flex;
 	justify-content: space-between;
@@ -297,6 +298,7 @@ p {
 	height: 3px;
 	background-color: orange;
 }
+
 /* CSS에서 적용하게 되면, 모든 요소에 적용이 된다. 물론 클래스를 따로 만들어서
 할 수도 있다. 하지만 코드가 많아진다. 따라서 우리는 html에 css를 인라인화 시켜서
 관리할 것이다. */
@@ -323,12 +325,14 @@ p {
 .work__categories {
 	margin: 40px;
 }
+
 .category__btn {
 	border: 1px solid var(--color-dark-white);
 	border-radius: 4px;
 	font-size: var(--font-regular);
 	padding: 8px 48px;
 }
+
 .category__btn.active,
 .category__btn:hover {
 	background-color: var(--color-green);
@@ -503,11 +507,13 @@ position: absolute를 사용하게 되면 어디로 이동할지 top과 left를 
 	.navbar__toggle-btn {
 		display: block;
 	}
+
 	#navbar {
 		flex-direction: column;
 		align-items: flex-start;
 		/* flex-start를 사용하게 되면 왼쪽으로 정렬 */
 	}
+
 	.navbar__menu {
 		flex-direction: column;
 		text-align: center;
@@ -536,4 +542,34 @@ position: absolute를 사용하게 되면 어디로 이동할지 top과 left를 
 		width: 80px;
 		height: 80px;
 	}
+}
+
+.arrow-up {
+	font-size: 50px;
+	bottom: 50px;
+	right: 50px;
+	width: 70px;
+	height: 70px;
+	position: fixed;
+	color: var(--color-white);
+	background-color: var(--color-green);
+	border-radius: 50%;
+	/* display none으로 하면 transition이 안 먹힌다. */
+	/* display: none; */
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 300ms ease-in;
+
+}
+
+.arrow-up.visible {
+	pointer-events: auto;
+	opacity: 1;
+}
+
+.arrow-up:hover {
+	opacity: 1;
+	cursor: pointer;
+	transform: scale(1.2);
+	transition: all var(--animation-duration) ease-in;
 }

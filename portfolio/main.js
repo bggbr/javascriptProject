@@ -44,3 +44,26 @@ const homeContainer = document.querySelector('.home__container');
 window.addEventListener('scroll', () => {
 	homeContainer.style.opacity = 1 - window.scrollY / homeHeight;
 });
+
+// Show "arrow up" button when scrolling down
+const arrowBtn = document.querySelector('.arrow-up');
+arrowBtn.addEventListener('click', () => {
+	window.scrollTo(0, 0);
+	scrollIntoView("#home");
+})
+
+// window.addEventListener('scroll', () => {
+// 	if (window.scrollY > homeHeight / 2) {
+// 		arrowBtn.style.display = 'block';
+// 	} else {
+// 		arrowBtn.style.display = 'none';
+// 	}
+// })
+// the other solution
+document.addEventListener('scroll', () => {
+	if (window.scrollY > homeHeight / 2) {
+		arrowBtn.classList.add('visible');
+	} else {
+		arrowBtn.classList.remove('visible');
+	}
+})
