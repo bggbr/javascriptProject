@@ -154,6 +154,10 @@ p {
 	padding-top: 120px;
 	text-align: center;
 	color: var(--color-white);
+	transition: all var(--animation-duration) ease-in-out;
+}
+
+#home.home__dark {
 }
 
 .home__avatar {
