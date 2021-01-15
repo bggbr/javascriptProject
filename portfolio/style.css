@@ -158,7 +158,8 @@ p {
 	transition: all var(--animation-duration) ease-in-out;
 }
 
-#home.home__dark {}
+#home.home__dark {
+}
 
 .home__avatar {
 	width: 250px;
@@ -368,6 +369,13 @@ p {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	opacity: 1;
+	transition: all var(--animation-duration) ease-out;
+}
+
+.work__projects.animation-out {
+	opacity: 0;
+	transform: scale(0.99) translateY(40px);
 }
 
 .project {
@@ -379,6 +387,10 @@ p {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.project.invisible {
+	display: none;
 }
 
 .project__img {
@@ -459,9 +471,11 @@ position: absolute를 사용하게 되면 어디로 이동할지 top과 left를 
 }
 
 .testimonial__speech-bubble {
+	width: 70%;
 	padding: 18px;
 	background-color: var(--color-white);
 	border-radius: var(--size--border--radius);
+	word-wrap: break-word;
 }
 
 .testimonial__speech-bubble p {
@@ -552,14 +566,13 @@ position: absolute를 사용하게 되면 어디로 이동할지 top과 left를 
 	height: 70px;
 	position: fixed;
 	color: var(--color-white);
-	background-color: var(--color-green);
+	background-color: var(--color-light-green);
 	border-radius: 50%;
 	/* display none으로 하면 transition이 안 먹힌다. */
 	/* display: none; */
 	opacity: 0;
 	pointer-events: none;
 	transition: opacity 300ms ease-in;
-
 }
 
 .arrow-up.visible {
