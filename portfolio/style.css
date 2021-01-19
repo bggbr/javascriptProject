@@ -180,6 +180,10 @@ p {
 	border-radius: var(--size--border--radius);
 }
 
+.home__contact:hover {
+	background-color: yellow;
+}
+
 /* Section Common */
 /* 전부다 대부분의 아이템들이 중간으로 정렬돼 있다.
 우리가 공통적인 것들을 정의해줄 필요가 있다. 
@@ -329,6 +333,7 @@ p {
 	border-radius: 4px;
 	font-size: var(--font-regular);
 	padding: 8px 48px;
+	position: relative;
 }
 
 .category__btn.selected,
@@ -515,6 +520,21 @@ position: absolute를 사용하게 되면 어디로 이동할지 top과 left를 
 즉, 차이점들만 뽑아진 아이들만 들어가야 한다는 것이다.
 스타일링은 본론에만 차이점만 media에 넣자.*/
 @media screen and (max-width: 768px) {
+
+	/* Font Size를 @media 쿼리에서 재설정 가능 */
+	/* Font Size */
+	:root {
+		--font-large: 30px;
+		--font-medium: 18px;
+		--font-regular: 16px;
+		--font-small: 14px;
+		--font-micro: 12px;
+	}
+
+	.section {
+		padding: 16px;
+	}
+
 	.navbar__toggle-btn {
 		display: block;
 	}
@@ -543,6 +563,7 @@ position: absolute를 사용하게 되면 어디로 이동할지 top과 left를 
 
 	.about__majors {
 		flex-direction: column;
+		margin: 16px 0 0 0;
 	}
 
 	.major {
@@ -557,6 +578,7 @@ position: absolute를 사용하게 되면 어디로 이동할지 top과 left를 
 		/* grow란 알아서 화면을 메꿔주는 것이다. */
 		flex-grow: 1;
 	}
+
 
 	.testimonial__avatar {
 		width: 80px;
